@@ -13,11 +13,16 @@ export default function SignInScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Sign In</Text>
+
       <TextInput style={styles.input} placeholder="Email" keyboardType="email-address" />
       <TextInput style={styles.input} placeholder="Password" secureTextEntry />
-      
+
+      <TouchableOpacity onPress={() => console.log('Forgot password pressed')}>
+        <Text style={styles.forgotPassword}>Forgot Password?</Text>
+      </TouchableOpacity>
+
       <TouchableOpacity style={styles.button} onPress={handleLogin}>
-        <Text style={styles.buttonText}>Login</Text>
+        <Text style={styles.buttonText}>Sign In</Text>
       </TouchableOpacity>
 
       <TouchableOpacity onPress={() => navigation.navigate('SignUp')}>
@@ -45,7 +50,13 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     padding: 12,
     borderRadius: 8,
-    marginBottom: 16,
+    marginBottom: 10,
+  },
+  forgotPassword: {
+    color: '#047857',
+    textAlign: 'right',
+    fontSize: 14,
+    marginBottom: 20,
   },
   button: {
     backgroundColor: '#047857',

@@ -11,7 +11,6 @@ export default function SplashScreen({ navigation }) {
 
   return (
     <View style={styles.container}>
-      <Image source={require('../assets/logo.png')} style={styles.logo} />
       <Text style={styles.title}>P-LAMENT</Text>
     </View>
   );

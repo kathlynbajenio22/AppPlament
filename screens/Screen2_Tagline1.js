@@ -1,11 +1,14 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
 
-export default function Tagline1Screen({ navigation }) {
+export default function Screen2_Tagline1() {
+  const navigation = useNavigation();
+
   return (
     <View style={styles.container}>
       <Image source={require('../assets/recycle.png')} style={styles.image} />
-      <Text style={styles.title}>Turn plastic into purpose 🌱</Text>
+      <Text style={styles.text}>Welcome to P-Lament: Your Recycling Adventure Starts Here</Text>
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('Tagline2')}>
         <Text style={styles.buttonText}>Next</Text>
       </TouchableOpacity>
@@ -27,10 +30,10 @@ const styles = StyleSheet.create({
     resizeMode: 'contain',
     marginBottom: 30,
   },
-  title: {
+  text: {
     fontSize: 20,
-    textAlign: 'center',
     color: '#047857',
+    textAlign: 'center',
     marginBottom: 40,
     fontWeight: '600',
   },

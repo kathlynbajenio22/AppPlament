@@ -5,7 +5,7 @@ export default function Tagline2Screen({ navigation }) {
   return (
     <View style={styles.container}>
       <Image source={require('../assets/snap.png')} style={styles.image} />
-      <Text style={styles.title}>Snap, track, and earn rewards 📸</Text>
+      <Text style={styles.title}>Snap,Track, and Earn </Text>
       <TouchableOpacity style={styles.button} onPress={() => navigation.navigate('SignIn')}>
         <Text style={styles.buttonText}>Get Started</Text>
       </TouchableOpacity>
